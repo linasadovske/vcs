@@ -1,0 +1,686 @@
+/* Import */
+@import "fonts.less";
+@import "reset.less";
+
+/* Vars*/
+@grey: #242b2e;
+@m_font: 'Roboto';
+@i_font: 'icomoon';
+@f_font: 'sans-serif';
+@m_color: #2db8b7;
+@gap: 25px;
+
+/* Less is more*/ 
+
+body {
+    
+    position: relative;
+
+}
+
+.main {
+    
+    display: flex;
+    font-family: @m_font, @f_font;
+    font-weight: 300;
+	font-style: normal;
+    background: #b4b7b8;
+
+}
+
+/* Šoninė juosta */
+
+.left-side {
+
+    background-color: @grey;
+    width: 300px;
+    color: #555;
+    text-align: right;
+    min-height: 311px * 4;
+    z-index: 10;
+    box-shadow: 0 0 50px #000;
+
+    }
+
+/* Logotipas */
+    
+.logo-wrapper {
+
+    display: block;
+    background-color: #fff;
+    height: auto;
+    width: 300px;
+    padding: @gap 0 @gap 0;
+    
+    > a {
+
+        text-decoration: none;
+        color: #555;
+        font-size: 40px;
+        text-align: center;
+        
+    }
+   
+}
+
+.logo-wrapper h1 {
+    
+    margin: 0;
+    
+}
+
+/* Navigacija */
+    
+.main-nav ul {
+
+        font-size: 0px; 
+
+        > li {
+
+            font-family: @m_font, @f_font;
+            font-size: 18px; 
+            line-height: 32px;
+            text-align: right;
+            background: linear-gradient(to bottom, #333b3f 0%, #2e363a 100%);
+            border-bottom: 0.5px solid #202426;
+
+            > a {
+
+                display: block;
+                font-family: @m_font, @f_font;
+                color: #fff;
+                text-transform: uppercase;
+                text-decoration: none; 
+                padding: @gap @gap @gap 0;
+
+              }
+
+            &:hover {
+
+                            
+                background: linear-gradient(to bottom, #31bcbb 0%, #18a3a1 100%);
+                background-color: @m_color;
+                right: @gap;
+
+                }
+
+         }
+
+}
+
+.alt-menu {
+    
+    display: none;
+    padding: 1.2em;
+    font-size: 1em; 
+    line-height: 2em;
+    text-align: right;
+    background: linear-gradient(to bottom, #333b3f 0%, #2e363a 100%);
+    border-bottom: 0.5px solid #202426;
+   
+    > a {
+        
+        text-decoration: none;
+        color: #fff;
+        text-transform: uppercase;
+    }
+    
+}
+
+.i-menu:after {
+    
+    font-family: 'icomoon';
+    content: attr(data-icon);
+    color: #fff;
+    display: hidden;
+    font-size: 1.5em; 
+    padding-left: 1em;
+    text-decoration: none;
+    border: none;
+    background: linear-gradient(to bottom, #333b3f 0%, #2e363a 100%);
+    
+}
+
+/* Social dalis */
+            
+.test:after {
+    
+    font-family: 'icomoon';
+    content: attr(data-icon);
+    font-size: 3em;
+    color: @m_color;
+    display: inline;
+    margin: 0.5em 0 0.5em 0;
+    
+}
+
+.ikonos {
+
+    font-size: 0.5em;
+    padding: @gap @gap @gap 0;
+    border-top: 0.5px solid #202426;
+
+}
+
+.social {
+    
+    display: inline-flex
+    
+}
+
+.test {
+
+    margin-left: 0.5em;
+    display: inline-flex;
+    padding-top: 5%;
+    text-decoration: none;
+        
+}
+
+.rights {
+
+    font-family: @m_font, @f_font;
+    font-size: 0.75em;
+    line-height: 1em;
+    color: #4f5456;
+    padding: 0 @gap @gap 0;
+
+}
+
+/* Pagrindinė zona */
+
+.right-side { 
+    
+    font-size: 0px;
+    position: relative;
+}
+        
+.squares-wrapper {
+
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        font-size: 1em;
+
+}
+
+.squares {
+    
+    position: relative;
+    font-size: 1em;
+    width: 25%;
+    
+}
+
+.squares img {
+    
+    width: 100%;
+    
+}
+
+.overlay {
+    
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .2s ease;
+    background-color: rgba(45, 184, 183, 0.9);
+    font-size: 1em;
+    
+}
+
+.squares:hover .overlay {
+    
+  opacity: 1;
+    
+}
+
+.arrow:after {
+    
+    font-family: 'icomoon';
+    content: attr(data-icon);
+    font-size: 3rem;
+    color: #fff;
+    display: inline-block;
+    z-index: 99;
+    border: 1px solid;
+    transform: translate(-50%,-50%);
+    border-radius: 100%;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    
+        &:hover {
+        
+        transform: scale(1.1,1.1);
+        
+    }
+    
+}
+
+.work-title {
+    
+    color: #fff;
+    font-size: 1.5rem;
+    padding-top: 3%;
+    font-weight: 400;
+	font-style: normal;
+    text-align: center;
+    
+    > span {
+        
+        border-bottom: 1px solid;
+        padding-bottom: 0.7em;
+        font-size: 1rem;
+        font-weight: 100;
+	   
+    }
+    
+}
+
+/* informacija viršuje dešinėje */
+        
+.information {
+    
+    z-index: 9999;
+    width: auto;
+    height: auto;
+    
+}
+
+.info {
+    
+    background-color: @m_color;
+    display: block;
+    position: fixed;
+    color: #fff;
+    right: 0;
+    top: 0;
+    font-size: 1em;
+    z-index: 9999;
+    
+    > a {
+        
+        text-decoration: none;
+        color: #fff;
+        font-size: 1rem;
+        display: inline-block;
+        
+        
+        &:hover {
+            
+            transform: scale(1.1,1.1);
+            
+        }
+        
+    }
+    
+}
+
+.info-box {
+
+    display: none;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.6);
+    top: @gap*2;
+    width: 250px;
+    right: 0;
+    z-index: 999999;
+   
+}
+    
+.box li {
+    
+    color: #fff;
+    padding: 0.6rem;
+    z-index: 9999;
+    font-size: 0.6em;
+    list-style: none;
+        
+           > a {
+            
+        text-decoration: none;
+        color: #fff;   
+        font-size: 0.8rem;
+        font-style: 100;
+               
+    }     
+        
+}
+
+/* Informacijos ikonos */
+
+.iko:after {
+    
+    font-family: 'icomoon';
+    content: attr(data-icon);
+    font-size: 1.5em;
+    color: #fff;
+    display: inline-block;
+    margin: 0.2rem;
+    z-index: 9999;
+    border: 1px solid;
+    padding: 9px;
+    border-radius: 100%;
+    
+        &:hover {
+        
+        transform: scale(1.5,1.5);
+            
+    }
+    
+}
+
+.moon:before {
+    
+    font-family: 'icomoon';
+    content: attr(data-icon);
+    font-size: 1.7em;
+    color: #fff;
+    display: inline;
+    margin: 0.5em 0 0.5em 0;
+    z-index: 9999;
+    padding: 5px;
+    
+}
+
+/* jquery classes */
+
+.over {
+    
+    background-color: rgba(45, 184, 183, 0.3);
+    z-index: 999;
+    
+}
+
+.show {
+    
+    display: block !important;
+    transition: all 1s ease-out;
+
+}
+
+/* about page */
+
+.about {
+    
+    background: #fff;
+    margin: @gap;
+    height: ~"calc(100% - 50px)";
+    position: relative;
+    font-size: 16px;
+    
+}
+
+.about-who h2 {
+    
+    font-family: @m_font, @f_font;
+    font-size: 2em;
+    padding: @gap;
+    color: #4f5456;
+    font-weight: 400;
+    
+}
+
+.about-skills h2 {
+    
+    font-family: @m_font, @f_font;
+    font-size: 2em;
+    padding: @gap;
+    color: #4f5456;
+    font-weight: 400;
+    
+}
+
+.about-who img {
+        
+    width: ~"calc(70% - 50px)"; 
+    margin: @gap;
+        
+}
+
+.about-who p {
+    
+    font-family: @m_font, @f_font;
+    font-size: 1em;
+    line-height: 1.3em;
+    color: #4f5456;
+    height: 100%;
+    padding: 0 @gap @gap @gap;
+    
+}
+
+.about-skills p {
+    
+    padding: 10px @gap;
+    font-family: @m_font, @f_font;
+    font-size: 16px;
+    line-height: 20px;
+    color: #4f5456;
+    
+}
+
+.container {
+    
+    width: ~"calc(100% - @gap)"; 
+    background-color: #fff; 
+    box-sizing: border-box;
+    border: 1px solid;
+    margin: 0 @gap/2;
+    
+}
+
+.skills {
+    
+    text-align: right; 
+    padding-right: 20px; 
+    line-height: 40px; 
+    font-size: 20px;
+    color: #fff;
+    background: linear-gradient(to right, #474747 0%, #7c7a7a 100%);
+    
+}
+
+/* contacts */
+
+#map {
+    
+    width: ~"calc(100vw - 319px)";
+    height: 100%;
+    position: absolute;
+    top: 0;
+    
+}
+
+.contact-box {
+    
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    box-sizing: border-box;
+    
+}
+
+.contact-inner {
+    background: #fff;
+    margin: @gap;
+    padding: @gap;
+    height: ~"calc(100% - 50px)";
+    position: relative;
+    font-size: 16px;
+    font-family: @m_font, @f_font;
+    color: #4f5456;
+    width: 60%;
+    
+}
+
+.contact {
+    
+    display: flex;
+    
+}
+
+.in-touch h2,
+.contact-box h2 {
+    
+    font-size: 2em;
+    padding: @gap;
+    font-weight: 400;
+    
+}
+
+.in-touch p {
+    
+    padding: 10px @gap;
+    font-size: 1em;
+    line-height: 1.2em;
+    font-weight: 300;
+    
+}
+
+.contact-box h3 {
+    
+    margin: 0.6em;
+	display: block;
+	font-size: 1em;
+    
+}
+
+.contact-box input[type="text"], 
+.contact-box input[type="email"], 
+.contact-box input[type="tel"], 
+.contact-box input[type="url"], 
+.contact-box textarea {
+    
+	width: 100%;
+	border: 1px solid #CCC;
+	background: #fff;
+	margin: 0 0 3px;
+    padding: 1.2em 0 1.2em 0.6em;
+    font-size: 0.8em;
+    font-weight: 100;
+
+}
+
+.contact-left,
+.contact-right {
+    
+    width: 100%;
+    
+}
+
+.contact-box input[type="submit"] {
+    
+	cursor: pointer;
+	width: 102%;
+	border: none;
+	background: #1ab5b3;
+	color: #fff;
+	padding: 1.2em;
+	font-size: 1em;
+    text-transform: uppercase;
+    
+}
+
+.contact-box input[type="submit"]:hover {
+    
+	background: @m_color;
+	transition: background-color 0.3s ease-in-out;
+    
+}
+
+.contact-box input[type="submit"]:active { 
+    
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5); 
+
+}
+
+/* kontaktu ikoneles */
+
+.con {
+    
+    display: flex;
+    
+    .icon {
+        
+        border: 1px solid #CCC;
+        top: 0px;
+        left: 0px;
+        z-index: 2;
+        text-align: center;
+        margin: 0 1px 3px 5px;
+        width: 5em;
+        
+        > i {
+        
+        font-size: 0.4em;
+            
+            &:hover {
+                
+                transform: scale(1.2, 1.2);
+                
+            }
+        
+        }            
+        
+    }
+    
+}
+
+/* Media rules - responsive design */
+
+@media all and (max-width: 320px){
+    .main-nav {display: none;}
+    .main-nav ul li a {padding: 1em;font-size: 1em;line-height: 1.2em;text-align: center;}
+    .filter {display: none;}
+    .ikonos {display: none;}
+    .rights {display: none;}
+    .alt-menu {display: block;position: relative;}
+    .i-menu {display: block;}
+    .left-side {width: 100%; min-height: auto;}
+    .right-side {width: 100%;position: absolute;top: 150px;}
+     .squares {width: 100%;}
+    .logo-wrapper {
+        width: 100%;
+        > a {
+        font-size: 1em;
+        }
+    }  
+}
+
+@media all and (min-width: 321px) and (max-width:767px){
+    .main-nav {display: none;}
+    .filter {display: none;}
+    .ikonos {display: none;}
+    .rights {display: none;}
+    .alt-menu {display: block;position: relative;}
+    .i-menu {display: block;}
+    .left-side {width: 100%; min-height: auto;}
+    .right-side {width: 100%;position: absolute;top: 150px;}
+     .squares {width: 50%;}
+    .logo-wrapper {
+    width: 100%;
+        > a {
+        font-size: 1em;
+        }
+    } 
+}
+
+@media all and (min-width: 768px) and (max-width: 992px){
+    .right-side {max-width: ~"calc(100% - 300px)";}
+    .squares {width: 50%;}  
+}
+
+@media all and (min-width: 993px) and (max-width: 1024px) {
+    .right-side {max-width: ~"calc(100% - 300px)";}
+    .squares {width: 33.33%;}
+}
+
+@media all and (min-width: 1025px) {
+    .squares {width: 25%;}
+}
